@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loading-animate {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+
+    >span {
+      display: block;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border: 4px solid;
+      border-radius: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+
+      // animation: scaleBall 2s forwards alternate  ease-in-out;
+      &:nth-child(1) {
+        border-color: #00a8ff;
+        animation: scaleBall 2s forwards,
+          ball1 2s 2s forwards ease-in-out,
+          openWidthTTB 3s 8s forwards;
+      }
+
+      &:nth-child(2) {
+        border-color: #e84118;
+        animation: scaleBall 2s forwards,
+          ball2 2s 4s forwards ease-in-out,
+          openWidthLTR 3s 8s forwards ;
+      }
+
+      &:nth-child(3) {
+        border-color: #fbc531;
+        animation: scaleBall 2s forwards,
+          ball3 2s 2s forwards ease-in-out,
+          openWidthBTT2x 3s 8s forwards ;
+      }
+
+      &:nth-child(4) {
+        border-color: #a8e063;
+        background: linear-gradient(to right, #56ab2f, #a8e063);;
+        animation: scaleBall 2s forwards,
+          ball4 2s 4s forwards ease-in-out,
+          openWidthTTB 3s 8s forwards ;
+      }
+
+      &:nth-child(5) {
+        border-color:  #c6ffdd;
+        background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+        animation: scaleBall 2s forwards,
+          ball5 2s 2s forwards ease-in-out,
+          openWidthRTL_MID 3s 8s forwards ;
+      }
+
+      &:nth-child(6) {
+        border-color: #ff9ff3;
+        animation: scaleBall 2s forwards,
+          ball6 2s 4s forwards ease-in-out,
+          openWidthLTR_MID 3s 8s forwards ;
+        ;
+      }
+
+      &:nth-child(7) {
+        border-color:  #114357;
+        animation: scaleBall 2s forwards,
+          ball7 2s 2s forwards ease-in-out,
+          openWidthRTL 3s 8s forwards ;
+      }
+
+      &:nth-child(8) {
+        border-color: #1dd1a1;
+        animation: scaleBall 2s forwards,
+          ball8 2s 4s forwards ease-in-out,
+          openWidthBTT_MID 3s 8s forwards ;
+      }
+
+      &:nth-child(9) {
+        border-color: #f7b733;
+        background: linear-gradient(to right, #fc4a1a, #f7b733);;
+        animation: scaleBall 2s forwards,
+          ball9 2s 2s forwards ease-in-out,
+          openWidthBTT 3s 8s forwards ;
+      }
+    }
+  }
+}
+
+
+
+@keyframes scaleBall {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+// SPECIFY FOR BALL ONE
+@keyframes ball1 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    top: 15%;
+    left: 15%;
+  }
+}
+
+// SPECIFY FOR BALL TWO
+@keyframes ball2 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    top: 50%;
+    left: 15%;
+  }
+}
+
+// SPECIFY FOR BALL THREE
+@keyframes ball3 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    top: 85%;
+    left: 15%;
+  }
+}
+
+// SPECIFY FOR BALL FOUR
+@keyframes ball4 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    top: 15%;
+    left: 50%;
+  }
+}
+
+// SPECIFY FOR BALL FIVE
+@keyframes ball5 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+// SPECIFY FOR BALL SIX
+@keyframes ball6 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    top: 85%;
+    left: 50%;
+  }
+}
+
+// SPECIFY FOR BALL SEVEN
+@keyframes ball7 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    top: 15%;
+    left: 85%;
+  }
+}
+
+
+
+// SPECIFY FOR BALL EIGHT
+@keyframes ball8 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    top: 50%;
+    left: 85%;
+  }
+}
+
+// SPECIFY FOR BALL NINE
+@keyframes ball9 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    top: 85%;
+    left: 85%;
+  }
+}
+
+@keyframes openWidthRTL {
+  0% {
+    width: 25px;
+    left: 85%;
+  }
+
+  50% {
+    width: 78px;
+    left: 67%;
+  }
+
+  100% {
+    width: 25px;
+    left: 50%;
+  }
+}
+
+@keyframes openWidthRTL_MID {
+  0% {
+    width: 25px;
+    left: 50%;
+  }
+
+  50% {
+    width: 78px;
+    left: 33%;
+  }
+
+  100% {
+    width: 25px;
+    left: 15%;
+  }
+}
+
+@keyframes openWidthLTR {
+  0% {
+    width: 25px;
+    left: 15%;
+  }
+
+  50% {
+    width: 78px;
+    left: 34%;
+  }
+
+  100% {
+    width: 25px;
+    left: 50%;
+  }
+}
+
+@keyframes openWidthLTR_MID {
+  0% {
+    width: 25px;
+    left: 50%;
+  }
+
+  50% {
+    width: 78px;
+    left: 68%;
+  }
+
+  100% {
+    width: 25px;
+    left: 85%;
+  }
+}
+
+@keyframes openWidthBTT {
+  0% {
+    height: 25px;
+    top: 85%;
+  }
+
+  50% {
+    height: 78px;
+    top: 67%;
+  }
+
+  100% {
+    height: 25px;
+    top: 50%;
+  }
+}
+
+@keyframes openWidthBTT_MID {
+  0% {
+    height: 25px;
+    top: 50%;
+  }
+  50% {
+    height: 78px;
+    top: 32%;
+  }
+
+  100% {
+    height: 25px;
+    top: 15%;
+  }
+}
+
+@keyframes openWidthBTT2x {
+  0% {
+    height: 25px;
+    top: 85%;
+  }
+
+  50% {
+    height: 129px;
+    top: 50%;
+  }
+
+  100% {
+    height: 25px;
+    top: 15%;
+  }
+}
+
+@keyframes openWidthTTB {
+  0% {
+    height: 25px;
+    top: 15%;
+  }
+
+  50% {
+    height: 129px;
+    top: 49%;
+  }
+
+  100% {
+    height: 25px;
+    top: 85%;
+  }
+}

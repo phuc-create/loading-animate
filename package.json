@@ -1,0 +1,6 @@
+{
+  "name": "animate-loading",
+  "scripts": {
+    "sass": "sass ./scss/style.scss ./css/style.css -w"
+  }
+}
